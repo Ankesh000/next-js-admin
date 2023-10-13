@@ -1,5 +1,5 @@
 {
-  "name": "admin-panel",
+  "name": "admin",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -12,11 +12,19 @@
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.14.12",
+    "@mui/lab": "^5.0.0-alpha.148",
     "@mui/material": "^5.14.12",
+    "@nextui-org/react": "^2.1.13",
+    "@react-stately/data": "^3.10.3",
+    "mdbreact": "^5.2.0",
     "next": "13.5.4",
     "react": "^18",
+    "react-datepicker": "^4.20.0",
     "react-dom": "^18",
-    "react-icons": "^4.11.0"
+    "react-hook-form": "^7.47.0",
+    "react-router-dom": "^6.16.0",
+    "sweetalert": "^2.1.2",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@types/node": "^20",
