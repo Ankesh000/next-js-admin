@@ -1,6 +1,14 @@
 import React, { useState } from "react";
 import Admin from "../admin";
-import { Grid, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material";
+import {
+  Grid,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+} from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import Image from "next/image"; // Import the Image component
 
@@ -26,16 +34,16 @@ const inputStyle = {
 };
 
 const rowHoverStyle = {
-  cursor: 'pointer',
-  '&:hover': {
-    backgroundColor: 'rgb(244, 240, 290)',
+  cursor: "pointer",
+  "&:hover": {
+    backgroundColor: "rgb(244, 240, 290)",
   },
-
 };
-
 
 export default function Company() {
   const [searchTerm, setSearchTerm] = useState("");
+  
+
   const companyData = [
     {
       name: "Glocify 1",
@@ -44,35 +52,35 @@ export default function Company() {
       numUsers: 1000,
     },
     {
-        name: "Glocify 2",
-        domain: "www.Glocify.com",
-        numEvents: 15,
-        numUsers: 1500,
-      },
-      {
-        name: "Glocify 3",
-        domain: "www.Glocify.com",
-        numEvents: 8,
-        numUsers: 800,
-      },
-      {
-        name: "Infosis 2",
-        domain: "www.Infosis.com",
-        numEvents: 15,
-        numUsers: 1500,
-      },
-      {
-        name: "Space X",
-        domain: "www.Space.com",
-        numEvents: 15,
-        numUsers: 1500,
-      },
-      {
-        name: "Space X 2",
-        domain: "www.Space.com",
-        numEvents: 15,
-        numUsers: 1500,
-      },
+      name: "Glocify 2",
+      domain: "www.Glocify.com",
+      numEvents: 15,
+      numUsers: 1500,
+    },
+    {
+      name: "Glocify 3",
+      domain: "www.Glocify.com",
+      numEvents: 8,
+      numUsers: 800,
+    },
+    {
+      name: "Infosis 2",
+      domain: "www.Infosis.com",
+      numEvents: 15,
+      numUsers: 1500,
+    },
+    {
+      name: "Space X",
+      domain: "www.Space.com",
+      numEvents: 15,
+      numUsers: 1500,
+    },
+    {
+      name: "Space X 2",
+      domain: "www.Space.com",
+      numEvents: 15,
+      numUsers: 1500,
+    },
   ];
 
   const filteredData = companyData.filter((row) =>
@@ -97,13 +105,11 @@ export default function Company() {
       </Grid>
       <Grid>
         <TableContainer
-          
           style={{
             maxHeight: "345px",
             overflowY: "auto",
             margin: "20px",
             width: "95%",
-          
           }}
         >
           <Table>
@@ -132,8 +138,7 @@ export default function Company() {
                           alt="logo"
                           width={35}
                           height={30}
-                          style={{  marginRight:"10px"}}
-                         
+                          style={{ marginRight: "10px" }}
                         />
                         {row.name}
                       </div>
@@ -145,8 +150,8 @@ export default function Company() {
                 ))
               ) : (
                 <div style={{ textAlign: "right", marginTop: "20px" }}>
-                                 No row found.
-              </div>
+                  No row found.
+                </div>
               )}
             </TableBody>
           </Table>

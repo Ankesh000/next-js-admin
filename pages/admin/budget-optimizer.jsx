@@ -85,7 +85,13 @@ export default function Destination() {
         >
           <TextField label="Max Price (Optional)" variant="outlined" />
         </Grid>
+
+
       </Grid>
+      <Grid style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' ,marginTop:"80px" }}>
+  <h4 style={{ opacity:".6" }}>Choose a destination...</h4>
+</Grid>
+
     </div>
   );
 }

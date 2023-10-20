@@ -20,7 +20,7 @@ import MoneyOffIcon from "@mui/icons-material/MoneyOff";
 import CategoryIcon from "@mui/icons-material/Category";
 
 export default function Admin() {
-  const [activeButton, setActiveButton] = useState(0); // Set the initial active button to 0 (the first button)
+
   const router = useRouter();
 
   const navbarMargin = {
@@ -29,10 +29,30 @@ export default function Admin() {
     marginRight: "-8px",
   };
 
+  const routeNames = [
+    "events",
+    "budget-optimizer",
+    "company",
+    "vendors",
+    "packages",
+    "vendor-settings",
+    "reconciliation",
+  ];
+
   const handleButtonClick = (index) => {
-    setActiveButton(index);
+    if (routeNames[index]) {
+      router.push(`/admin/${routeNames[index]}`);
+    }
+  };
+  const getActiveIndex = () => {
+    const currentRoute = router.pathname.split("/")[2];
+
+    const activeIndex = routeNames.indexOf(currentRoute);
+    return activeIndex !== -1 ? activeIndex : 0;
   };
 
+  const activeButton = getActiveIndex();
+ 
   return (
     <div>
       <div style={navbarMargin}>
@@ -62,8 +82,8 @@ export default function Admin() {
           "Vendor-Settings",
           "Reconciliation",
         ].map((text, index) => (
-            <Link href={`/admin/${text.toLowerCase()}`} key={text}>
-              
+            // <Link href={`/admin/${text.toLowerCase()}`} key={text}>
+              // router.push(`/admin/${text.toLowerCase()}`)
           <ListItemButton
             key={text}
             onClick={() => handleButtonClick(index)}
@@ -87,7 +107,7 @@ export default function Admin() {
             </ListItemIcon>
             <ListItemText primary={text} />
           </ListItemButton>
-          </Link>
+        
         ))}
       </Box>
       

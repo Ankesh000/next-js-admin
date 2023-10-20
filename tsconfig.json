@@ -22,6 +22,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "pages/admin/vendors.jsx", "pages/form/vendorForm.jsx", "backend/src/server.js", "backend/src/routes/vendorRoute.js", "backend/src/model/venderModel.js", "backend/src/controller/verdorController.js"],
   "exclude": ["node_modules"]
 }
